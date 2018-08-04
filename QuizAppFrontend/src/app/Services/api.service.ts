@@ -28,6 +28,18 @@ export class ApiService {
     return this.http.get('https://localhost:44327/api/questions');
   }
 
+  putQuestion(question){
+
+    this.http.put(`https://localhost:44327/api/questions/${question.id}`, question).subscribe(res => {
+
+      console.log(res)
+
+
+    })
+
+
+  }
+
   selectQuestion(question){
 
     this.selectedQuestion.next(question)
