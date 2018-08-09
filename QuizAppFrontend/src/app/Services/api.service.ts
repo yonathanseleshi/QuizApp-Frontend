@@ -33,10 +33,10 @@ export class ApiService {
 
   }
 
-  getQuestions(){
+  getQuestions(quizId){
 
 
-    return this.http.get('https://localhost:44327/api/questions');
+    return this.http.get(`https://localhost:44327/api/questions/${quizId}`);
   }
 
 
