@@ -11,7 +11,7 @@ import {
 import {RouterModule} from '@angular/router';
 
 
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import {HttpClientModule} from '@angular/common/http'
 
 import { ApiService } from './Services/api.service';
@@ -23,6 +23,7 @@ import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizzesComponent } from './quizzes/quizzes.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes = [
@@ -30,7 +31,8 @@ const routes = [
   {path: 'question', component: QuestionComponent},
   {path: 'question/:quizId', component: QuestionComponent},
     {path: 'questions', component: QuestionsComponent},
-  {path: 'quiz', component: QuizComponent}
+  {path: 'quiz', component: QuizComponent},
+  {path: 'register', component: RegisterComponent}
 
   ];
 
@@ -42,7 +44,8 @@ const routes = [
     HomeComponent,
     NavComponent,
     QuizComponent,
-    QuizzesComponent
+    QuizzesComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ const routes = [
     MatListModule,
     MatCardModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
